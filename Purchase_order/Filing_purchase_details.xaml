@@ -1,0 +1,369 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Filing_purchase_details" this:Filing_purchase_details.in_browserUrl="https://vyaparapp.in/tools/free-online-purchase-order-generator#" this:Filing_purchase_details.in_companyName="HP" this:Filing_purchase_details.in_companyAddress="CHENNAI" this:Filing_purchase_details.in_vendorName="GOPI" this:Filing_purchase_details.in_vendorAddress="MADURAI" this:Filing_purchase_details.in_purchaseOrderNo="87859" this:Filing_purchase_details.in_daTe="22-10-2010" this:Filing_purchase_details.in_dueDate="12-11-2010" this:Filing_purchase_details.in_gstPercent="5" this:Filing_purchase_details.in_notesValue="ASSESSMENT 6" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_browserUrl" Type="InArgument(x:String)" />
+    <x:Property Name="in_companyName" Type="InArgument(x:String)" />
+    <x:Property Name="in_companyAddress" Type="InArgument(x:String)" />
+    <x:Property Name="in_vendorName" Type="InArgument(x:String)" />
+    <x:Property Name="in_vendorAddress" Type="InArgument(x:String)" />
+    <x:Property Name="in_purchaseOrderNo" Type="InArgument(x:String)" />
+    <x:Property Name="in_daTe" Type="InArgument(x:String)" />
+    <x:Property Name="in_dueDate" Type="InArgument(x:String)" />
+    <x:Property Name="in_gstPercent" Type="InArgument(x:String)" />
+    <x:Property Name="in_notesValue" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>878,3982</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Filing_purchase_details_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="72">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Filing the purchase details to the vyaparapp.in and downloading the pdf file." DisplayName="Filing_purchase_details" sap:VirtualizedContainerService.HintSize="476,3917" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_inputDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started filing purchase order process&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Online Purchase Order Generator | Free PO Maker - Vyapar" sap:VirtualizedContainerService.HintSize="434,3532" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="dbd18324-1880-4398-9a4f-28aaa0cdc081" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,3316" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="int_itemCount" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Company Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Text="[in_companyName]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="231, 385, 341, 40" ElementType="InputBox" FriendlyName="'INPUT user-company'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="7e7312a3-bf00-4d92-b8a2-34d2bedc98c3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVkAAAAsCAYAAADPassdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATCSURBVHhe7Zs7cuM4EED3vA50DkW6iU6iSFVyokCO7HCcK8GigQaIHymaJji70ntVCAiCQDdZeGxqPP8YAADoBpIFAOhIJdnT6WQOh4PZ7Xbm7e2NRqPRaA+a+FK8Kf4sySR7PB7Nfr835/PZ3O937QUAgCnEl+JN8ad4NCVKVgwsA5ArAMAyxJ/i0bSijZKVUldMDAAAyxGPik8DUbLymwJVLADA7xCPik8DUbLy4y0AAPye1KdIFgBgZZAsAEBHkCwAQEeQLABAR5AsAEBHkCwAQEeQLABAR5AsAEBHkCwAQEd+Ldnb+9mcz1fzpccZn1f3f3cvH9/asRF/buZi15W1Q7t+6rmX4stcJf/3m6mfwLd7dps/G4AXY4VKVjfytdSs38R1f1++riLVi7n90Q5Bpft6QtFn03zJIFmALVhBshatWNON/P1xsX0jFW4vXByFYANT554WL9nLe+tZIFmALVhHshZfQepG1soxq57KT/i0wnXnWtXn0CfzXz5uE5WZxvCTyllfDqGlwnEvCfuZfXN5aXNzD9WhtCEO33+1MaZ55nFqdZ+cz+QXcv5sz+HyKz79Q5xtVWpMn62vilqy/hmmLX0mrfz8ef9C1b4ylqnnDvACrCbZsAll01ayqypdFVUYM1Oy05XozyozL4ZkPpVBuD6II84XZTFI0Y8Jx5pTOmdRPdcvgdZ9sMeJqLI1qmr8Uc4qRrnvOvfwDPJr3TqZIFXMsS/kN+QfpDys78fE45F4ES28EitK1hIrw6Q6s9RysbixOq4QqqPoc3OMVmyC38B55ThGW06paHKBCo1r0hxKwSjN3BOy85UILdl9KNZo3beMRLKWPKf2PUjJxdvIL8tfyOeU3Kr5H8YM8FysK9nmxh3bzLJpdbO1Nl7R90hWc6QxkMsn4tb00hir7LL5G5It56zn0T47NrZMsjPuQ/oiKObOKWPyOfj1Ru5XfFFqKySb5TcpWV0rnSu2IkeAJ+bvSTaVx1y5TEr20Rgfh5fEiGQTafSQrIvPSWYQUxbzjPswHI/c14xGTO566cuvH8Q/rJXfg59K1o+fjg/g+dlAsoVIAukGbcnFnR/65ki2OU8gm68dZyqVpZIdz70lYT/njySr1/h/gBrJNdJaU2Oy115iPhPPbbFki9wAXpRNJOs3Y7pB/YYdNmB5rBs0kcgsyVqCQGpR5XH5yi0ZV4xZKtlszkzs/nx6vY81yWuWZEPs9rosvhYNMTpCrCGeWoj1Go25JiVrqZ57mDe9BuC52UaygkrMbVxppTCz81Yq7s+YBrnMlaxDN3faatFYinFp3Esl2/oTp0jjHmTSmSnZME/zPmeMSdaiuQ9zDOJ1TXJ3Y8LaCyQrFPcYwcKrsbJkX5kJoa1NS7wA8J8Eya7GdpJ11e/cqh4A/ipIdjW2kGz4pOeTG+D/ApIFAOgIkgUA6AiSBQDoCJIFAOgIkgUA6AiSBQDoSFOyu93O3O93PQIAgCWIR8WngSjZw+Hg/gskAAAsRzwqPg1EyZ5OJ7Pf76lmAQAWIv4Uj4pPA1GywvF4dAPExMgWAGAe4kvxpvhTPJqSSVYQA0upK78pyI+3NBqNRptu4kvxZlrBBirJAgDAeiBZAIBuGPMvtMwlbf9zMWgAAAAASUVORK5CYII=" InformativeScreenshot="544b776a71c2335dabd04e7d74f7e1f9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="231, 326, 281, 42" ElementType="Text" FriendlyName="'Purchase Order'" FullSelectorArgument="&lt;webctrl parentid='purchase-order-form' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='purchase-order-form' tag='SPAN' type='' class='' aaname='Purchase Order' check:innerText='Purchase Order' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAR0AAAAuCAYAAAAV883MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAtISURBVHhe7Z3ta9vIFofvfxsCoiCCoNQLYkGEawJmQZSYQAJ1Yb0EhVtK0IIJzYe4UOdDQjEEQ3G4CIIhXgpiEQRBODvjKIk0OjN6sSQ7m/PA+WJLY2nOzG/ezoz/AwRBEA1CokMQRKOQ6BAE0SgkOgRBNAqJDkEQjUKiQxBEo5DoEATRKCQ6BEE0CokOQRCNgojOBXQ3NmCjiG1qYLw1wNi2oX88As+Pknr14HnZvYy+JlZH6MP03IW+bS3KrrYZ95EGOvvMsvvgnk9hfhfds4bMjs3Yc0dmujCLvl9HqhEd0TYN6BxPIYhSfL2Q6KwdgQfDD6YgMlmmgbk3gMkaNqYkOoIZBxevXHhIdNaJ4IcDlpb2R25jjWn36zxKbT0g0UGs/eU1j7VIdNaF4LILOuKLMmZ99iCM0l01/2rRwStKCIE/Z2NjBzpb6XsWpvdgfB9d/uog0VkLblywZMMpow39kwl4f8dk5C4A72oAvV81/B5m1vF6VOtXKDoxAnafRHhebyUj0Vk59xPoScpl6+MY/IwGcf61CwYmWJsWuGtQs1+36DDCb3bqPm6tz+ucBXVCorNq0ErJTN/LP98oHZrZw5XPWb560YG7IdjIvRvMwQmYE1PXZGTUxZ5wPTMT6eKmrzMfWqRwDqMPFhhvos83NWjt7MNAuiQRgn89AvegDeZbHbRYmtqWASa7172cQahsKTPyki/bnvWhbcbS1/Qo7Xn+eYP7EGaX0fKvIQwJFuEMJrR3HRhe+/nSVKUXX07OfH+REOZs2NLfMZ/9wI29s2G2Yf/4AmZVLk/fj6Gnx37n0QoP+QMY2kg6Gy1wvOiSR2YumOJ1Ufn3Jy7YMV9rWxbYRyOYo07h5W8o5BXPewu6LJ8e7yknOtX4oWxdq1Z0JPeuXHRuZuBa4ueRYQXwrxH0TPl4PmGaBY5UuOR5mWclRTP7MM5oSkNvAB0Dvx8zbduBqSLN4IdbKL3F+//I0d7nzdNFuMUkc9iTi3EP7aFg5SaTawcMJK3WkaA6EtFRTWRbJ0L58cfQz8qrKN8Li06Ffihb16oVHf8U2si9qxWdFrR3dOGzZxMLzUIMCsVwcNNZ/mAVD8/Lzl6BlRSL5YvM8aoJUpXJ0iybHiugve/yPlSZPNU7p/L3zsn00EDSjlrjwkzwXtPOKSQkAxOd7Ta0Ze+/acMo3qtQzI2mTQfLQt5RUpeq9kPZulap6ARf8Tkd608htqFR0VGZ0D3+yUSzTKXjhk4s4nlZ1OxvWIVWtCg5LJ2mB847/NpcttWDCVY4l8hT/WCcf4iZwofTHSRd1tpOoiuKMtpF0tvch3H0/QJMdFT2fvT8jvfL+fTJsLpUgx/K1rXqREeq0AY419E1j6yL6GwPYq2UZNwedTOfQuHv5jA57qA9FT45mXSOQnSwdI+sxNzRk9nDtNPRoYMO9pkHwePFimfdYAUpwRWS3lYH3Kv5c3qM8G+PjddN9DnTQibJU5auc/n8nOFfUxjsYr0SZM4kN6wCm2J6zDLKmQq858Qam9voAk4h0dGhF3ODbCEmf35FlnrHevxQtq4tJzr3PE7Hg8lJD0zZ/ATm5FWIDqvk3TPFxKfnQCt1n2zYxMrWZ2xVpA2nib62THRk6Ybs+ZHu6S+fUnmDvWfrcBp9G8eHwXb6WnFY4H9pp65RzX1MPhqgGXyCug/u2QQ8P0gLI5anm20YxCvpEwH67voHQRxzI8n73VH0fXHwlTBhuKYQHT6fNvmZyqUIiZ+2unCBFsEQvP9hz8NMrEs1+aFsXcstOuWMKaTYy+GsQHRUFYiDFqhET0jAP4XOG76K1YX9owGMrjzw412CBZK8xHouj5wjebPBCl709RNhAL43geFxH7qLVQhWiH5G3wnMPrfSaQr5HWJDY6ElLAqWpwYqjBE/B2AJ15cfDknyXpxfLMBSoqMzH6pWhCQrv/ZXxSS9bHVO8G1dfihb12oUHR06XyQ/3rjo2DBULgGGaPdz+fgiPC9Tc1xxsLzBRKcAaGUR8ztjWKAZFti/uzD8PoV5LhXC51S659HXKDP49It4T9mJX0k5XlFPR1nJOdjwNrPcslH2gXgPs4Rv6/NDubpWl+gYHXBVW3KbFh1keJIEH//nWrFTguelMt2bT8gwr6joRMPeMx5rI9lRncpvWSyKxN60oH3gwsWNTICwglvOyvlB8vsZ5UzF5CO2MpNvTkddyRlYncgst+znMhuU+vxQrq5VJDqaYYDxlrWEBw4MrnIEjDUtOqrhzIIx7CMVcyWigxZateiEQSQwu20wU8F8EsPyO5iCU2L1RDN7MLoVc7iCxiuycn6QrF6Jq025wXvDKd+g/kMWUwRy9UYxMutSfX4oV9eWnUguS9OikzmOf5miE96OlJsSlSbL73sfvLMeWFsF0+UhAzdRGgtWLTqynkm2AKDI5k8sFxKDZdR/2UPE+Z+WcA+zlyg6OebM1kd03jogH/Xiw5/qRAdP3/6aZ+5CRX2iE4x70JLEXTyvKo1hehuAh6205SjQfAl1dNwHe1s8WU9iiTTxYLpKy1EWWDljlooizoMkujlXRHKeeanCdeKBbLGqzw8vX3SUQwh8XFqd6OBdZ/XkH7vnPd/XFA0rz6Nl48TQsibRkeyctg5jcT8xSnfdE4QQ3E5hrJonSsxvzNFAt0bPV5L1TjZtGCoWhdJIhmpY/EpZ0UG3WWRPyqLlPeHb+vzwLxAdRQYHQ+ikrq9SdCQV850D0jbxnuUTUvGSz1ST6HzfF75nppjAQ4cZguiEgQ/z6/HzEvyWkQhcS3HrppdVhcqFBtOpwhBqwDtCwgWY6buj3Pu7ZsdIb4KbuAWCU1Z0JOWpc6ZQxzt2T44l87r88LJER7J5Do9JwIOVuFUpOnhwoPywJjw4UGz56hEdVCDf9mGKVaJglF0wZT2CnQHMZRUTbQiEyoUuAysCLtl78R38lr0PzskIxtdzCDJa+kzuxrAv2cukdwbgKUfQIXgnkohu9q6fEnNYEWVFh/3W6L14HzNpcKC8XqR6sTX54WWJjuwIjM0W7H97XP1i3XnvApyOJGOZVSo60iVjDaw/LsB7jE1RbS1ItXz1iA4WPcxNfz+A6WPEK3vO6Vn+SPHpoaRH0HHgwosNG8OA9YiGsI8tw6YCyCRRtjyG6yh2fIIqTytokUPWM8SFg5lmLo6KSJ0ceOlCV7EbW3pyYGnRYaDiwCy1XWEC7m9FtkHU44eXJTrs8U876d8oatWKDmPZDZ+plq8e0cGvKWjiJKWiR5DX0HmCsjvXFyaJaC+Bf17hGcmHin86WUZ0VL2XIpYSHUYNfnhhosO4+VSg4rCu4F4n9XnlosNo4miLpUWH9QLHBwUKp9EF+7/i5+I+MQYvmCX/LUH1zx/lKrwior0kec4wUhrfpHuScSj7UqLDKLjTXN/rpoe5mOgwqvbDyxMdhmrZ98lY97f/ndUOZPK5DtFZUOQQLx59LT3Eqi7RYdzPYajaaRyZ8dvDvAU2D5Q6PIrjZ3TdRVvsls/+j7NCh4NlRbQvAz/V7vc2fu6x1DQwbDff/14tKzocJjynOXzwcMYzUsYkosOp0g8vUnQW3M1gdGSDFY+k5ccmbtvgnE3Bf2xWmhSdBbHjSoUoXx6Bne+4zhpFJ8L//xAcfqxoLJhvMQm4J2xRwOYL3rEhluT5w5sJDI660DYN0IXeAX9/vtE14Z888GNQrwYPz1s6TysifPjHB4dHcUv/4ZNPpE6KHaFahehEPPk2dqToIgYrsf2kmOgsqMgPFYoOQRBEfZDoEATRKCQ6BEE0CokOQRCNQqJDEESjkOgQBNEoJDoEQTQKiQ5BEI1CokMQRKOQ6BAE0SAA/wBUKncpLjOMwQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Company Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Text="[in_companyAddress]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="231, 445, 341, 70" ElementType="InputBox" FriendlyName="'TEXTAREA user-company-a…'" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' class='' aaname='' /&gt;" Guid="efe6fe0d-07d4-4ada-9779-f0365eda9a06" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVkAAABKCAYAAAARxydaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATkSURBVHhe7dqxUuM4AIDhe14KnoMqb8KTUGUGmhRQQbn0NL7IshxJVhKTRHt77PfNeGYdJ7Ylhj9Kln8GALoRWYCOFpF9enoaNpvNcH9/P9zd3dlsNpvtzBZ6GboZ+lkrIvv4+Dg8PDwM2+12+Pr6mh4F4JTQy9DN0M/Q0dwc2VDg8ARxBbhM6GfoaL6inSMblrqhxABcLnQ09DSZIxu+U7CKBbhO6GjoaTJHNnx5C8D18p5eHdnPt+dxeXzYdsPHdOxv9LGL8/D89jk9cto4fy+vw9Fn/3odnrfPw+uvaR/4490osh/DLkS1CkSM7t8ahTgnzy9hDta92Ygs/Dw3iey4YjsSh1PHfrT3XYzrGMbtsHufHj9BZOHnuUFk44ptTUSiz+H1JX6MXn6lMJ3rLYYpHo9RKb6KyEKUwvQ6fTSvj4+m0M3Hw7bLrhpeu99PH++LczQjeW7M0xjHa+T/LhVj2s/Dax3Z6r7jvKTIhnvY//stxDy+Pl2hGMciyvX8V8fHN4fseOO+gfWuj+y3VlcxTovAzYGYjjeCcfheMz4n7c+hms9ZR60RxCkk6bF0jcNz8ms0IplWqdPuQh3m1vPHx7J5S3GbI1uOM+0fXjPtF28ox+71cJ1xrNnxYvW8+Fk25g74lhtF9kRwcs045b/IdVj2Fq+JISkjW53zbPjLeIzhKWI1PTbFqL5GHapaEa5RPa5yDEl+H8tz7BXBbMzVkZ/F4X4bEc5VQQau91tXss1w7IUIxFiU8RutiezinI3zpMDsH09bEdkqPMVj4xjLN4Ly3LnzAT12jnwsrXsq5/rYXMWxLbZ0ruI59c+tmqNjMQZWuz6y56KTra7aQcyjdCwc10Q2/ruMRnmds5Hdm/cX91M5FbpTgdy7NrLj60/dWyEPauNNMh9HfR/AajeI7LHQRWMs0rFmoJZBLOKzJrL1OfMYta5ZrEzbQVs8Fs6zH8f4H2wnolOMtxDHFl9bjiHJX9uc03EsJ0JdHF+rfS+z1vwBq90ksnNAqijEAOa/9HloojEs8y/xpZHNzzmt0NL+IjzTPWTXWRXZxuuWGvefKcZa39e4vz8+z2E81yF+6fonIpvGXvwc8vNUcxMs3pDyuZruuZobYL0bRTaKEcm31gpo+kVvPqcRjjWR3Uel+BOuKgpziKdt917GZl1k0/haY4ridY4fr1fQc1jHrfEnXNN8zPe9+BOuOrJBPb/1KrU8Z9jyc9RzVb9xAt9z08j+F1Jkf0cIrOqA7xLZ1cIKsPwoDXCOyK6QPkKXH7sBzvvfRxbgTyayAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdCSyAB2JLEBHIgvQkcgCdNSM7P39/fD19TXtAXCJ0NHQ02SO7GazGbbb7bQHwCVCR0NPkzmyT09Pw8PDg9UswIVCP0NHQ0+TObLB4+Pj+IRQYrEFWCf0MnQz9DN0NFdENggFDkvd8J1C+PLWZrPZbKe30MvQzXwFmywiC8DtiCxAN8PwL2Ff97GO+7fuAAAAAElFTkSuQmCC" InformativeScreenshot="b7d02700b02fe1e465dceb968cd10df7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="231, 326, 281, 42" ElementType="Text" FriendlyName="'Purchase Order'" FullSelectorArgument="&lt;webctrl parentid='purchase-order-form' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='purchase-order-form' tag='SPAN' type='' class='' aaname='Purchase Order' check:innerText='Purchase Order' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Vendor Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Text="[in_vendorName]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="231, 599, 341, 40" ElementType="InputBox" FriendlyName="'INPUT customer-name'" FullSelectorArgument="&lt;webctrl id='customer-name' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='customer-name' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="688c65f9-c58a-4e57-a27b-f87d336485bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVkAAAAsCAYAAADPassdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPrSURBVHhe7du7btswFIDhPm8GP4cnv4mfxJMAZ9HgTPWY7F5YHZJHOrxYtiURMdD/AwjUii6UgP5mhPaPAwA0Q2QBoKEisqfTyR0OB7fb7dzHxweDwWAwHgzppXRT+plLIns8Ht1+v3dd17nb7Ra3AgDmSC+lm9JP6ag1RlYKLDsQVwBYRvopHbUr2jGystSVEgMAlpOOSk/VGFl5p8AqFgDWkY5KT9UYWXl5CwBYz/aUyALAxogsADREZAGgISILAA0RWQBoiMgCQENEFgAaIrIA0NDqyPZd57r+Gj+Vrv3w86539/dY4fvizt3ZXb7j55f9uMtn585fP/HzK8Kx9+7N3/fMcwHwf1gd2Z+v80xErz7CyyL2hLeIbP14IgtArI5sCN2dUP3thwitieADqyMbYtj/jR9eEgP9KV8y5RyILACxPrIDH5TPy5AdK670TGj8fvJ6wY80TH5FPJzj6lfGuk+2Qo5B15/3X2VkH16jvyQr0DSyYeU9HT/3mmNaBdfu32+zkfVfOPbc9ospXDfcj/48zD38phC35c84ex5EHXg/m0S2umKNAQgBK4ObH6MxmcKTH5O/etAg6jni/iZE4ZzlNeor1ymaqghlwu5fvhZJjq2suNO56b1MUffHV+53/Fw888ozBvDrtols5S+4j4gGz0emXBXaEIXopPvYcyTnUzY0lZDpvDRMtWtMylDOy6KcRW8+0INkvpVr+/PZuabXk/MXc60+AwC/aaPI5gGrBSiszIphI5tF1G6rRstGpYhS4M8xcw0r3IPO7V6MVXaPAz/HufnGmE7XSCObrLBnIxv+PJ3HDiILvJPNIpuEIgtEiNd8tGoBtNuWRtYe9yiyExvDe/MuI6vHybZkvn6e4Xzj/pWV7PORna4D4L1tGNkpaEUQfTDmV1iPIlsNpD1v9VflNITPR1ZV4jeqRTZeY5jHWVaac3FPnsmrkQ1/Tp4xgLe0aWTtii0NU4xCEpp0NVYLUbotX72Fz1Ooymto8DS81diN8vMPitBZ9ciO85C52cja84zPaWlkB/7n6THFdQD8um0jq4GphszEJw4bqFoAy20a1jAW/ROuu5EdmC+J2vGpe5Ed6HnMSrOcl436gsiKGNppEFjg3WwcWQCARWQBoCEiCwANEVkAaIjIAkBDRBYAGiKyANAQkQWAhogsADREZAGgoWpkd7udu91u8RMAYAnpqPRUjZE9HA7+/8IDAJaTjkpP1RjZ0+nk9vs9q1kAWEj6KR2VnqoxsuJ4PPodpMTEFgCeI72Ubko/paNWElkhBZalrrxTkJe3DAaDwZgf0kvppl3BqiKyAIDtEFkAaMa5f+IebAQJA0B2AAAAAElFTkSuQmCC" InformativeScreenshot="5e6858e1728fe04f0ad61cd589033ed0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="231, 552, 852, 27" ElementType="Text" FriendlyName="'Purchase Order to'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='bill-txt' aaname='Purchase Order to:' check:innerText='Purchase Order to:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA1gAAAAfCAYAAAD6KmzhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP0SURBVHhe7dxBcts2FIDh3rXLLnqBrLLIDbxLbpHJInfIjH2JjG+hSopIPoAPFGihtuX5vhksKtMkCHmBf8j0rwMAAABDCCwAAIBBBBYAAMAgAgsAAGAQgQUAADCIwAIAABhEYAEAAAwisAAAAAYpAuvX138Pf//THg+PlwPfyDy/zz8Pvy+f3Zfnw/fP5Zqex9eny89v9/vHl8t5vx1+XT77Xz1+e71rAQDAO7crsE7j04/ny9Gv764D6xwi5VrWY0TAvmZgvXrMAQDAO7c7sN5yM323gfX88/BptY7Z+HL4fmO/CiwAAHg7eWAlAbNspqcIeDo8nP+7fqoVXoObzxOPfQqvycWgWI6ZRv20rJhfHS3Ja3bLnJexfgKXvbbXCJ1VKPWFRRGuq7Wtrj/fR8eaVfM53Vszeq7Ovec7mjRedazubRXsyd9VfLL31q+gAgDArV49sIox/XzrCU8Ip9WGvRpxHllcTWM5rhEK51GFRfMVv0aMzcK9Z4FxFucxhc+VNbv6ymEIqK65X7le4VpgNc51Hu11FVgAANy7G14RXDbR+wKrDpIsLuJcluPj/NJISq63bNqT40LYLceFuSZPk5bPwvmSp2ez9BqJOTSm+92/ZmVIJaG2Ofet6+VaT8uy7644f4w2gQUAwAeyO7CyENkVWHWMtALkvPFubdzLz5uvxU2K8DiOJLA2o2IVPxfz543rnowIrI01K9c+WaPuuW9cryFf99bfxVFrLgAA8EHsCKx6U/yywFptunsD5GieX3wCcpRu9OfNfDLC76f3XAXG1uuGf8ZGMAwIrD1rVq9F/9w3rteQrvvW/e74rgEA4B51/xustXccWOGcy3mzeU3Cz8KY5npTYIV7b69rvP4UKwILAADuzbsKrOJnl8/jRrw7sFavv51sBVZpeapVn28rpNqW84Vzzqq4S/5NVPeaHb187oMCa+s8N64jAAC8dzcEVvbUpXpi0hNYHeeZImt/YIVAC5/Nv58dd7Scb/10J74+2L1eIYi2RwyP3jULvxPvcV7L3rlvXS+XB1aMvPx+ivVqfAcAAHCPbgisuJFujN7N+1aAhLm05rfe6IfNfDbm36+eHtUjBEkMvnp0hUERP/koz3Nlza6eL4/VeizX3B9Yqzkk3/d6lDEmsAAA+EhuCqyTOrIeHkO0JBvu9uY92ZRX/7OJ/sA6qqLtfN15M1++opYFSF8IlufpkUZpdZ9/dKxZPZ/jedK1OLk69xcE1ipQy2uu7jX7uxJYAAB8IEVgAQAA8HICCwAAYBCBBQAAMIjAAgAAGERgAQAADCKwAAAABhFYAAAAgwgsAACAQQQWAADAIAILAABgiMPhPznaZarw4Q0GAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Vendor Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Text="[in_vendorAddress]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="231, 659, 341, 70" ElementType="InputBox" FriendlyName="'TEXTAREA customer-addr'" FullSelectorArgument="&lt;webctrl id='customer-addr' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='customer-addr' tag='TEXTAREA' type='' class='' aaname='' /&gt;" Guid="0fc0fffd-16a0-4deb-8eb3-3c2c79f1d9ac" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVkAAABKCAYAAAARxydaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR0SURBVHhe7dq9buM4FIDRfd4UeY5UeZM8SSoDSeMiU03KSe9GK0qiTFL0zzq+2QX2HICFLVuiDOTzHWP+GgAII7IAgTaRfX19HZ6fn4fHx8fh4eHBsizLurBSL1M3Uz9bVWRfXl6Gp6enYbfbDYfDYXkWgHNSL1M3Uz9TR0trZFOB0wvEFeA2qZ+po+VEu0Y2jbqpxADcLnU09TRbI5t+UzDFAnxP6mjqabZGNv14C8D3lT29IbKfw34ch3f7z+Xx1ud+PL7bj68M8OdjeNu9DR9/lsf39Hs/jfq794/ha3nqrIt7mT+r/e/lIfC/8M3IDsPXr7czEZ3D8vbrqkz9c4GRnb4c3t/G818ZRpEFOr4d2TkuJ0I6TYNBk2YSFtkcxK/h4/38pL4SWaDj+5EdzVNf+8/qbaDmnw7yqoM0TcTjOT6nyTi/ppmQl6Dn4/tf27BdvMb+Y97XePzUhF1O5ycn9Yt7maOaj7+Nx8vIntxLc9428PN+jsfre6ivGfYzDXC1u0S2O7EusZij0pkIm/fkeByj0b5nDsjxeA5KPsfy+iL28zm31zg/TfavW7/nyr2s51geF+fp7mXzOTbnmY4X4aym5/m1ZXSnL5zyMwd+3H0iu4nKEpEcvCkG26mqjMAcnfo15Tmq82VllKrgZHV4etfY6JynndQv7qWNYVJ96fT3kq5TRnJS7Of8/tvwA/8Fd4psG4BmqpqiM4aqt8rINuEqn+tOZWUQe2EbTec4c41W9zVlQEeX9tK/Tj0Rb1+zfFG1n8+08rXzxDyvNqjTOdfjp2IM/KS7RbaKSBO8+Y///B99L0zlc7dGtnxf7xq1OmLtylGLiex8/NpJdHp/s6+j8j7EFv5Nd4zsMT6bCDWTYE8vTOVz3XCV5y2Du+r8XLCJX+HMPqd7WoJ1cS+94E/7u2KSbeN9wfl7qsMO/Ly7RjaHJE1Q9R/2EpAqBvXk1otF/Vw76eVpLUdxe43p/UU0zwdpCempyE3hzPd15V7Wcy2P1/ef2Et1jdl8D0Xcq3jP55330e5p1Is98KPuG9kck27IjqHJqwxCLzrb53LM5nXTf+E6Fdlm0txqw3lpL/X9dv8LV28vS2iPq45kfX/jKr8Uii+5edX3D/y8O0cWgJLIAgQSWYBAIgsQSGQBAoksQCCRBQgksgCBRBYgkMgCBBJZgEAiCxBIZAECiSxAIJEFCCSyAIFEFiCQyAIEElmAQCILEEhkAQKJLEAgkQUIJLIAgUQWIJDIAgQSWYBAIgsQSGQBAoksQCCRBQgksgCBRBYgkMgCBBJZgEAiCxBIZAECiSxAIJEFCCSyAIFEFiCQyAIEElmAQCILEEhkAQKJLEAgkQUIJLIAgbqRfXx8HA6Hw/IIgFukjqaeZmtkn5+fh91utzwC4Bapo6mn2RrZ19fX4enpyTQLcKPUz9TR1NNsjWzy8vIyvSCVWGwBrpN6mbqZ+pk6Wqoim6QCp1E3/aaQfry1LMuyzq/Uy9TNcoLNNpEF4H5EFiDMMPwNOXQWOdgtcXMAAAAASUVORK5CYII=" InformativeScreenshot="b9a56dcc501a65087bc17922a063f1be.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="231, 552, 852, 27" ElementType="Text" FriendlyName="'Purchase Order to'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='bill-txt' aaname='Purchase Order to:' check:innerText='Purchase Order to:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA1gAAAAfCAYAAAD6KmzhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP0SURBVHhe7dxBcts2FIDh3rXLLnqBrLLIDbxLbpHJInfIjH2JjG+hSopIPoAPFGihtuX5vhksKtMkCHmBf8j0rwMAAABDCCwAAIBBBBYAAMAgAgsAAGAQgQUAADCIwAIAABhEYAEAAAwisAAAAAYpAuvX138Pf//THg+PlwPfyDy/zz8Pvy+f3Zfnw/fP5Zqex9eny89v9/vHl8t5vx1+XT77Xz1+e71rAQDAO7crsE7j04/ny9Gv764D6xwi5VrWY0TAvmZgvXrMAQDAO7c7sN5yM323gfX88/BptY7Z+HL4fmO/CiwAAHg7eWAlAbNspqcIeDo8nP+7fqoVXoObzxOPfQqvycWgWI6ZRv20rJhfHS3Ja3bLnJexfgKXvbbXCJ1VKPWFRRGuq7Wtrj/fR8eaVfM53Vszeq7Ovec7mjRedazubRXsyd9VfLL31q+gAgDArV49sIox/XzrCU8Ip9WGvRpxHllcTWM5rhEK51GFRfMVv0aMzcK9Z4FxFucxhc+VNbv6ymEIqK65X7le4VpgNc51Hu11FVgAANy7G14RXDbR+wKrDpIsLuJcluPj/NJISq63bNqT40LYLceFuSZPk5bPwvmSp2ez9BqJOTSm+92/ZmVIJaG2Ofet6+VaT8uy7644f4w2gQUAwAeyO7CyENkVWHWMtALkvPFubdzLz5uvxU2K8DiOJLA2o2IVPxfz543rnowIrI01K9c+WaPuuW9cryFf99bfxVFrLgAA8EHsCKx6U/yywFptunsD5GieX3wCcpRu9OfNfDLC76f3XAXG1uuGf8ZGMAwIrD1rVq9F/9w3rteQrvvW/e74rgEA4B51/xustXccWOGcy3mzeU3Cz8KY5npTYIV7b69rvP4UKwILAADuzbsKrOJnl8/jRrw7sFavv51sBVZpeapVn28rpNqW84Vzzqq4S/5NVPeaHb187oMCa+s8N64jAAC8dzcEVvbUpXpi0hNYHeeZImt/YIVAC5/Nv58dd7Scb/10J74+2L1eIYi2RwyP3jULvxPvcV7L3rlvXS+XB1aMvPx+ivVqfAcAAHCPbgisuJFujN7N+1aAhLm05rfe6IfNfDbm36+eHtUjBEkMvnp0hUERP/koz3Nlza6eL4/VeizX3B9Yqzkk3/d6lDEmsAAA+EhuCqyTOrIeHkO0JBvu9uY92ZRX/7OJ/sA6qqLtfN15M1++opYFSF8IlufpkUZpdZ9/dKxZPZ/jedK1OLk69xcE1ipQy2uu7jX7uxJYAAB8IEVgAQAA8HICCwAAYBCBBQAAMIjAAgAAGERgAQAADCKwAAAABhFYAAAAgwgsAACAQQQWAADAIAILAABgiMPhPznaZarw4Q0GAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Purchase order number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Text="[in_purchaseOrderNo]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="869, 280, 213, 40" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='purchase_order_no' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='purchase_order_no' tag='INPUT' type='text' class='purchase-order-number' aaname='' /&gt;" Guid="49af942d-f834-47b9-8266-4a2b90043905" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAAsCAYAAADo4R3cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOKSURBVHhe7Z07cuowFEBZbwqWkiWwA1aSihnSuICKlKFKG8X6od+1MJ/LgzfnzGgSZOt/jyXTsDAAoMri7e3NkEik29NyuTTv7+/m4+Mj6OVZ/Pz8GJvsTQBwPb+/v+Z4PJrVamXW63XIRTKAu2Nls6LFHQ3JABSwO5o9OlqQDEABu5vZdzQLkgEoEZ1CMgAlkAxAGSQDUAbJAJRBMgBlkAxAGSQDUAbJAJRBMgBlbpTsywybjdmIaRiv6nHcb83mc2eO4fNT8b0z22o+tvtre+rneDiEj/By3EUyKQC+hjG4FCV4Vslcv5o5OZrd57XzgWSvjppk/mm+Nbvv8PnOPKVk3TEH0YZL93cke3UeI5kUfEWerWf8fz+E41U8aobAdHk2pTqiZDu7Y8brtXSHWF9K5bHN9z9dr4+4dfv9I7DbvXsSuf7EOqbGXPZpu9+1c1yNKx+Tm5dhnJfQb/GYGuf+YP+meup1dOM5XU9zD5ehJFl1PJolWXa/oz1i+aOYD8Z4LEtBVO0UQpu+TMzz9+dBWEri+9QE8KRobX0t+Xx1xnzqQ/h8KiP1oexnnJd2TTLc3JRtl/WGdpvriHYNd5EsPe2ylAfPTMmKAJXKZEgB7/KKoK0412aO3S2aunoi+Wvd4A5t5pIVdRU7XSAI4ctMtJGVk+aloagzkM+NOPe9sUMPpZ2sQlq0Ik+oRwq4DEkoWTJfd3oApH74gIz5grBFuZR6kvWDsJUsH3Ov/3kZqU+FZL0HjeXcekzMvav74ndK+H8lc/X7ADwFvtQPRx68vs1rvh29/J3sQsnCmHrzrSnZ2fGByL+TzC1kR7JJITznJBODrWhTIvXDle9ILtLts9/p6ne+YsxScLs6432+TG+3vItk4jg4Ll7LYyQL97Uv9HEhpXrqoBzJFn+WZHnAhmCt2yyCRthp2vb74/XtToyl6O+cMcd5Svf5+ksB8l1XmpcGSaIir+2v1C7M40GSjZyC3KZxsdzXx3HRpupJQXYqFxZZCqY6zwVfUbYSq+hTvMdf8gTRsjRrrEK5dgeYN2bpK3wf8Fn9tQw3S+Zp5y9csEh1gMiNkgHAOZAMQBkkA1AGyQCUQTIAZZAMQBkkA1AGyQCUQTIAZZAMQBkkA1AGyQAU4UcAAZTh52wBFOGH2QGUsHLZHcwKtl6vQ+4omZWLRCLdnuw7mD0ixh0ssgh/AUAFY/4AeMg/Zb8v3pcAAAAASUVORK5CYII=" InformativeScreenshot="d76b9b5cd223879182f15a9667006fec.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target Accuracy="0.87" DesignTimeRectangle="845, 290, 8, 17" ElementType="Text" FriendlyName="'#'" FullSelectorArgument="&lt;webctrl aaname='#' parentid='purchase-order-form' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='#' parentid='purchase-order-form' tag='SPAN' type='' class='' check:innerText='#' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAwAAAAVCAYAAAByrA+0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACNSURBVDhP3ZE7CoAwEES9q6WFvZ2FF0inl5BAziCYQySn2Ho0kI9Zf4iVFq8Iwxt2SEFEeMJPBYux7TBa/7YKTatgfH4gaIhqwBTe84Cy1zHfC6xx6muIOeVRcEFZndNImwtbMTWy81aYcD3YwYS80cgunhJ4tyFvZOd5MuFusGMjsEb2YQE2+p7vC4QF/42W3ENkFekAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:CommentOut DisplayName="Modern date - Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,143" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Text="[in_daTe]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="844, 407, 239, 40" ElementType="InputBox" FriendlyName="'INPUT inv-date'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='date' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='date' class='' aaname='' /&gt;" Guid="8bc43395-cdb2-437e-a569-edc68f20e181" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPMAAAAsCAYAAACwno7FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANmSURBVHhe7Z2xTvMwFEa7McK7dAcepRIjA0NXJCQG3qAbjJ1hQAws8AKo8BKIJ2D1n8+JUyd22tCIEvs/R7oSbnztIPn4OgUpEwMAWYDMAJkQyLxcLs3x8bE5ODgwk8mEIIgRhbyUn/K0TUPm+XxuptOpeXh4MN/f39WnADAW5KX8lKfy1aeWWaarAxIDjB95Kl/9Cl3LrNIt4wEgDeSrvHXUMussTlUGSAf5Km8dtcx6uAaAtPC9RWaAhEFmgExAZoBMQGaATEBmgExAZoBMQGaATEBmgD3x8vJiI8ama31BZoA9sFqtzGw2s/H6+hqEu6Z+u/KrMr/dXpiz24+qFfL5dGPOrp/NZ9UGyBEJKqf6xq5CK9eBzAC/gI7PvqzbYtfjtnIdyAzwC0jOw8NDc3JysjXUbxQyW3nPqygkfWzJbOV118/vzGNvmT/MoshZPD2byzr/xjx+tcb0xio3kuIerl3/C3P5VCR8hWNsw47Vus96I6rGW7xXFyzV/RafDcmFPJCcErUP6vfnMpdS3Zm3RrtYyE7m97umPLYdLvQ45QL3x3cbhxXUUvZxbXe9liIyX0y0KO17N192kyjnKn9unEBs/+peh+RCFiQmc6ya+AvVX8BresvUEtUSLPrmHOHY4T3WFbJqd9Oa31bUtaDtjczOXQs6JBdyIC2ZWwvUsV6YMdl/LlMjv4/MDSmGyNzcHIK8xnE5nGdILqTPfymzbRf9XKwr8X5k7p6/oP4dN5wyNF/smDwkF5InLZmjspYLtxRqwyL2q1Qn+5F5M+X45Zdw4cZl76cYq/2lX8mQXEidxGR2VW0tV13l3OK08nkL2bZTktn7naI55fi63tzUSobkQtokJ7OoF2y1aINK4wS2scOfpv5YZvd82z5hOOycjXvyGJILSSM5j46OzOnp6dZQv1H+B1h2dHw34Ag3EI8huZA89/f35urqamuo364g8w+wlbxTOFX+blmH5AL0AZl74Z5p48dg93gRP0IPyQXoDzIDZAIyA2QCMgNkAjIDZAIyA2QCMgNkQlRmXukKkBadr3TlZesAadH5svXlcmmm0ynVGSAB5Kl8lbeOxoPyfD63HWQ8UgOMD3kpP+WpfPVpyCxkukq3zuJ6uCYIYjwhL+WnX5EdgcwAkCbIDJAFxvwDOzOfdyc+XXwAAAAASUVORK5CYII=" InformativeScreenshot="08f496aa09107ef8a0dde761f70cfa02.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="231, 352, 852, 27" ElementType="Text" FriendlyName="'Purchase Order to'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='bill-txt' aaname='Purchase Order to:' check:innerText='Purchase Order to:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA1gAAAAfCAYAAAD6KmzhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP0SURBVHhe7dxBcts2FIDh3rXLLnqBrLLIDbxLbpHJInfIjH2JjG+hSopIPoAPFGihtuX5vhksKtMkCHmBf8j0rwMAAABDCCwAAIBBBBYAAMAgAgsAAGAQgQUAADCIwAIAABhEYAEAAAwisAAAAAYpAuvX138Pf//THg+PlwPfyDy/zz8Pvy+f3Zfnw/fP5Zqex9eny89v9/vHl8t5vx1+XT77Xz1+e71rAQDAO7crsE7j04/ny9Gv764D6xwi5VrWY0TAvmZgvXrMAQDAO7c7sN5yM323gfX88/BptY7Z+HL4fmO/CiwAAHg7eWAlAbNspqcIeDo8nP+7fqoVXoObzxOPfQqvycWgWI6ZRv20rJhfHS3Ja3bLnJexfgKXvbbXCJ1VKPWFRRGuq7Wtrj/fR8eaVfM53Vszeq7Ovec7mjRedazubRXsyd9VfLL31q+gAgDArV49sIox/XzrCU8Ip9WGvRpxHllcTWM5rhEK51GFRfMVv0aMzcK9Z4FxFucxhc+VNbv6ymEIqK65X7le4VpgNc51Hu11FVgAANy7G14RXDbR+wKrDpIsLuJcluPj/NJISq63bNqT40LYLceFuSZPk5bPwvmSp2ez9BqJOTSm+92/ZmVIJaG2Ofet6+VaT8uy7644f4w2gQUAwAeyO7CyENkVWHWMtALkvPFubdzLz5uvxU2K8DiOJLA2o2IVPxfz543rnowIrI01K9c+WaPuuW9cryFf99bfxVFrLgAA8EHsCKx6U/yywFptunsD5GieX3wCcpRu9OfNfDLC76f3XAXG1uuGf8ZGMAwIrD1rVq9F/9w3rteQrvvW/e74rgEA4B51/xustXccWOGcy3mzeU3Cz8KY5npTYIV7b69rvP4UKwILAADuzbsKrOJnl8/jRrw7sFavv51sBVZpeapVn28rpNqW84Vzzqq4S/5NVPeaHb187oMCa+s8N64jAAC8dzcEVvbUpXpi0hNYHeeZImt/YIVAC5/Nv58dd7Scb/10J74+2L1eIYi2RwyP3jULvxPvcV7L3rlvXS+XB1aMvPx+ivVqfAcAAHCPbgisuJFujN7N+1aAhLm05rfe6IfNfDbm36+eHtUjBEkMvnp0hUERP/koz3Nlza6eL4/VeizX3B9Yqzkk3/d6lDEmsAAA+EhuCqyTOrIeHkO0JBvu9uY92ZRX/7OJ/sA6qqLtfN15M1++opYFSF8IlufpkUZpdZ9/dKxZPZ/jedK1OLk69xcE1ipQy2uu7jX7uxJYAAB8IEVgAQAA8HICCwAAYBCBBQAAMIjAAgAAGERgAQAADCKwAAAABhFYAAAAgwgsAACAQQQWAADAIAILAABgiMPhPznaZarw4Q0GAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Modern duedate - Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,143" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Due Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Text="[in_dueDate]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="844, 467, 239, 40" ElementType="InputBox" FriendlyName="'INPUT due-date'" FullSelectorArgument="&lt;webctrl id='due-date' tag='INPUT' type='date' /&gt;" FuzzySelectorArgument="&lt;webctrl id='due-date' tag='INPUT' type='date' class='' aaname='' /&gt;" Guid="57bfc2c4-f47e-41fc-9a48-287423465cdc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPMAAAAsCAYAAACwno7FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANmSURBVHhe7Z2xTvMwFEa7McK7dAcepRIjA0NXJCQG3qAbjJ1hQAws8AKo8BKIJ2D1n8+JUyd22tCIEvs/R7oSbnztIPn4OgUpEwMAWYDMAJkQyLxcLs3x8bE5ODgwk8mEIIgRhbyUn/K0TUPm+XxuptOpeXh4MN/f39WnADAW5KX8lKfy1aeWWaarAxIDjB95Kl/9Cl3LrNIt4wEgDeSrvHXUMussTlUGSAf5Km8dtcx6uAaAtPC9RWaAhEFmgExAZoBMQGaATEBmgExAZoBMQGaATEBmgD3x8vJiI8ama31BZoA9sFqtzGw2s/H6+hqEu6Z+u/KrMr/dXpiz24+qFfL5dGPOrp/NZ9UGyBEJKqf6xq5CK9eBzAC/gI7PvqzbYtfjtnIdyAzwC0jOw8NDc3JysjXUbxQyW3nPqygkfWzJbOV118/vzGNvmT/MoshZPD2byzr/xjx+tcb0xio3kuIerl3/C3P5VCR8hWNsw47Vus96I6rGW7xXFyzV/RafDcmFPJCcErUP6vfnMpdS3Zm3RrtYyE7m97umPLYdLvQ45QL3x3cbhxXUUvZxbXe9liIyX0y0KO17N192kyjnKn9unEBs/+peh+RCFiQmc6ya+AvVX8BresvUEtUSLPrmHOHY4T3WFbJqd9Oa31bUtaDtjczOXQs6JBdyIC2ZWwvUsV6YMdl/LlMjv4/MDSmGyNzcHIK8xnE5nGdILqTPfymzbRf9XKwr8X5k7p6/oP4dN5wyNF/smDwkF5InLZmjspYLtxRqwyL2q1Qn+5F5M+X45Zdw4cZl76cYq/2lX8mQXEidxGR2VW0tV13l3OK08nkL2bZTktn7naI55fi63tzUSobkQtokJ7OoF2y1aINK4wS2scOfpv5YZvd82z5hOOycjXvyGJILSSM5j46OzOnp6dZQv1H+B1h2dHw34Ag3EI8huZA89/f35urqamuo364g8w+wlbxTOFX+blmH5AL0AZl74Z5p48dg93gRP0IPyQXoDzIDZAIyA2QCMgNkAjIDZAIyA2QCMgNkQlRmXukKkBadr3TlZesAadH5svXlcmmm0ynVGSAB5Kl8lbeOxoPyfD63HWQ8UgOMD3kpP+WpfPVpyCxkukq3zuJ6uCYIYjwhL+WnX5EdgcwAkCbIDJAFxvwDOzOfdyc+XXwAAAAASUVORK5CYII=" InformativeScreenshot="20cc6eb5c713794a392c3633b4e3323d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="875, 565, 168, 39" ElementType="Text" FriendlyName="'Amount'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Amount' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Amount' type='' tag='TH' class='' check:innerText='Amount' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAAArCAYAAADlhGO4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH5SURBVHhe7Z1BboMwEEVz/1PlIOxZsmLFwoWEsQczBJOqUn7zvvSkxBkbS344pqqUWyJEKAhLpHK73+8JQAWEBSkQFqRAWJACYUEKhAUpEBakQFiQAmFBCoQFKRAWpEBYkAJhQYoLwvZpXP9jZhq64HOAv6dd2N50nTMNqYtqFOiGNCnP/8tpFLZLw7SYOqZx9Xbso7oPx246hJWlTdhlV1oWeuy3r32Nk2HYbMbL8cGEXzKloXP9Zrry4TPV2Da0v0msjx1P/Hv/ZZDl3DQ+I3nTfTlNwpoMzwU2+SrxAiEO43a4w25BTYuwUR41CPsvaBDWHrbG1Fvbuvgmi2+bW1eR3a5q8tnubGPl916e8nBnbdeELfPMU7Id2xrczQBanAubVz2IX/hAhtJkYlfyW0F1BMjyre2lbF+zE9aPVY8fzBG0OBXW1vgoWaJAhr1ovxPW7+h1Wy3wg3r80glhRTkRNjgOGA0ylBLrV4138UiQr+VqLglr10NYWV4KG37NZkya9cz6jrCuZhc3Tp5HkLeEXVPmBSq8ELY8NB0tbHF0luRNYRd2QgY3yEbs+Rp9JWiTsJs/r1W1IMH5QxfAB4GwIAXCghQIC1IgLEiBsCAFwoIUCAtSICxIgbAgBcKCFAgLUiAsSIGwIAXCghT8TheRCsISoaT0A+0JmTqjiN0CAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Date'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[in_daTe]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a1488e6-ea59-452a-a641-499251559520" InformativeScreenshot="649270e98a1d68e08c345e9ee6942b2b" Selector="&lt;webctrl tag='INPUT' type='date' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey - Date" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="esc" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="80207b94-3573-4bac-802d-61de2ad480ce">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'Date'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="tab" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4b2784c-ea8a-424b-8c1a-9c2bb785d225" InformativeScreenshot="8a0541d1010acbfa5f6692083cc557c5" Selector="&lt;webctrl tag='INPUT' type='date' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Due Date'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_dueDate]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="339a8d7b-01c6-4368-8305-e50442d7c6be" InformativeScreenshot="506883b4801b3c1f108c4e5728fc4960" Selector="&lt;webctrl id='due-date' tag='INPUT' type='date' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey - Due Date" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="esc" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="748b6709-297b-4870-a590-5f0574f007a9">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'Due Date'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="tab" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="77cc9db7-b0b1-4baf-ad06-2ee9ba3f6d9e" InformativeScreenshot="a804886fa205074b53ead6043fbd0fd9" Selector="&lt;webctrl id='due-date' tag='INPUT' type='date' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <uix:NClick ClickType="Single" DisplayName="Click 'GST as yes'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="231, 446, 59, 25" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Yes' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Yes' tag='LABEL' type='' class='' check:innerText='Yes' /&gt;" Guid="27c4e301-7e6f-4e8d-a129-7f7d4f42480c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD8AAAAdCAYAAAAdO7TiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVFhH7ZbBjYMwEEW3TiR6QKIJmoAbl1AA6YAa4EADoQMOs3zjIcZg4xA2gYUnjURsE+V5Zuz80Im55M/KJX9WLnkXqqqiOI4pDEPyfV8EnjGGuSPiJA9Bz/OsgTVHY1E+iqJBME1Tquua2rYVgWeM8TzWHgmrPGc8CAIhagJzWIO171dAQ8UtoSTJqZQjI8q8m0soKxo5sB6jPPqYM2oTZ7CG179/BpSUd4LJXdeXGzMZX4dRnrOOsnaFW2CT/pcZzhXPpsjMFbECozxOctesM5x9vLsF5V0p/0dBmbYZPIZNEqFVRL9Zz3m9VYzyuMoggoPNFazFO3h3G/ryx48WG6HKicrIqHjIz3pLiHmlSsRGqet3L98hy18vd2zG5NBTBF1aZNdl39NndCzKN8JccHbloSlj7nbY74E3MCf/bAcX1N5X3zHKf/eqU7Fk/sUrT2zCreje7jHKA87+Z//k6MzJdyxchdOen36PVR58/++tQR4MhyHH9FAczWuVsigPuAJssX3G/x4neYA+hiBOclxlCDxjbNse/xzO8v+RS/6sXPJn5ZI/J0S/fT9tqogV+4sAAAAASUVORK5CYII=" InformativeScreenshot="00781be0852d2e4fb052ffd95a308c64.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="231, 406, 341, 30" ElementType="Text" FriendlyName="'Does your'" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='head-txt width-40' aaname='Does your Purchase Order include GST?' check:innerText='Does your Purchase Order include GST?' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'GST %'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Text="[in_gstPercent]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="862, 452, 200, 45" ElementType="InputBox" FriendlyName="'INPUT gst'" FullSelectorArgument="&lt;webctrl id='gst' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl id='gst' tag='INPUT' type='number' class='' aaname='' /&gt;" Guid="bbd807a5-f754-450d-bcc8-d9c5553f2b73" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAxCAYAAACWLkY1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIWSURBVHhe7dnBjoIwFIVhn5e3NcENC13pUh+hY4eWltLiPSNEJ/m/5G5aaGfRwx3w4ACYHbqucxRF2YoOAwgIDCAgMICAwAACAgMICAwgIDCAgMAAAgIDCAgMICAwgIDAAAICAwgIDCAgMICAwGA/18Edj8dUp7N7hCmLx6Wf3z/cwkzBtM/NDdk1/aXyl4R1qnMBgcEuFoc9ljE0t6Fyr68iNLZ9Hu588uPDMzbpnuE6zo7m17QQGOwge5rHA34/uz6MrT3Bf9WuzbpIOujGfeJYDFFcKw+fobt4BAbbmw537873MPY0dY0XXSZ1jfxpHzvAs+JBt+5jCMx4z3ydGgKDzdUPfHu81ApWOW7e51Vg4nzecRoIDDbXOvDpIK89ySudJJjWDUGw77P+DjOu87q7eAQGm/u+wHiNr2RCd/EIDDb3nYGpG9ewdRePwGBz/yYw5btNqwtlCAw2Vx7sKB3k+fhcFpgiCGVA3tsn3T++y6y/50QEBtv7ts/KVaGbxGsMn549AoMd2H+4rHaJ2rVTOP7ww2XFooMQGHxS6hJFFU/91r9Vabyo4gBb95kruotHYPBxWVdoHeJWYLxFGIrDOzHsk4vrzjsQ7zBARfw3bhnQNDcWX8mANxEYQEBgAAGBAQQEBhAQGEBAYAABgQEEBAYQEBhAQGAAAYEBBAQGEBAYQEBgAMGh6zpHUZSt6DCAmXM/LZAd4Tz3H1IAAAAASUVORK5CYII=" InformativeScreenshot="3466cb0a53b6feadaa8814563c4b87ae.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="783, 461, 79, 27" ElementType="Text" FriendlyName="'GST %'" FullSelectorArgument="&lt;webctrl parentid='gst-div' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='gst-div' tag='SPAN' type='' class='' aaname='GST %:   ' check:innerText='GST %:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAfCAYAAACbKPEXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHKSURBVGhD7ZZRDoMgDIY9o8kutHgVd5TtIHvYMZjOIm2hAlLdlvRL+rApCh8/YOcMNUymIiZTEZOpiMlUxGQqYjIVMZmKCDJfbrx0rutYXcbpisTdDfz+qYYHXF4Rnp2ouC3wGNB9w/RmxnN0/XztGl05lFgm6Wi6okFm2vQ3PAWNMokomEA2yffr3L534xP+OAkq03c0WzgNJXLwwBplwsQtE+SfhfrzpVTOIJlskLwzTHQYKFrevA1KLE0nJrSX70FkZJak8nXrP8/QTm+QiWVJswr30MTgvXJP5yplkuSxZV6YyuNlrimqf0HoHK0iObUyZ8geHVK59CPf/y/KxMlDxWZ/WV5CbSZlh8wk8JxMKo8kIXNrGaMSOl2fUh2Z/r3JQ+skCvbMOpkU1Fb8RtWQCc9Y30H73Jb4coLMCbJUk4NHJz7IxEmMU4G/EBIf1x/aZfJU4hP9zMQSmSSdmVoHXtpGTHKrTCGV/jf5lFoIATjqAPKQkzJdfJZxOtO11ek2mXHyfkkmkDydN/fJIKW8zUyLTNhG2JaUW+any/wLIHXxfkgndt/2Uc9/y/wxTKYiJlMRk6mIyVTEZCpiMhUxmYqYTDWcewMyWpZbF2vNggAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Notes'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="dbd18324-1880-4398-9a4f-28aaa0cdc081" Text="[in_notesValue]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://vyaparapp.in/tools/free-online-purchase-order-generator#" DesignTimeRectangle="231, 685, 852, 70" ElementType="InputBox" FriendlyName="'TEXTAREA'" FullSelectorArgument="&lt;webctrl name='notes_desc' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl name='notes_desc' tag='TEXTAREA' type='' class='desc-notes border-box' aaname='' /&gt;" Guid="7e94706c-a3b4-455c-9ede-c775623a6b52" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAA1gAAABKCAYAAACmafWlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ5SURBVHhe7dsxrptgFITRrNcF66BiJ6yEiu3Q/NFEhseLI9lJpjxHmsIWG/h04ccAAACgQmABAACUvATWtm1jWZYxTdN4PB5mZmZmZmZ2W1opzZR2+t23wFrXdczzPPZ9H8dxPP8FAADglFZKM6Wd0lB3V2ClvvKAsAIAAHgv7ZSGul+yrsDKiSsVBgAAwGfSUGmp0xVYeY/Q9QoAAOBzaai01OkKrHysBQAAwN+5t5TAAgAA+A8CCwAAoERgAQAAlAgsAACAEoEFAABQIrAAAABKBBYAAECJwAIAACgRWAAAACUCCwAAoERgAQAAlAgsAACAEoEFAABQIrAAAABKBBYAAECJwAIAACgRWAAAACUCCwAAoERgAQAAlAgsAACAEoEFAABQIrAAAABKBBYAAECJwAIAACgRWAAAACUCCwAAoERgAQAAlAgsAACAEoEFAABQIrAAAABKBBYAAECJwAIAACgRWAAAACUCCwAAoERgAQAAlAgsAACAEoEFAABQIrAAAABKBBYAAECJwAIAACgRWAAAACUCCwAAoERgAQAAlAgsAACAEoEFAABQIrAAAABKBBYAAECJwAIAACgRWAAAACUCCwAAoERgAQAAlAgsAACAEoEFAABQIrAAAABKBBYAAECJwAIAACgRWAAAACUCCwAAoERgAQAAlPwxsKZpGsdxPH8BAADwThoqLXW6AmtZlrHv+/MXAAAA76Sh0lKnK7C2bRvzPLtiAQAAfCDtlIZKS52uwIp1XX89kAoTWgAAAK/SSmmmtFMa6u5bYEXqKyeuvEeYj7XMzMzMzMzsa2mlNNP9cnV6CSwAAAD+jcACAACoGOMndQWcPNV9bjsAAAAASUVORK5CYII=" InformativeScreenshot="d2b407e912eee495e3d682b1fe36bec9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="231, 645, 341, 30" ElementType="Text" FriendlyName="'Notes'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h3' tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='H3' class='head-txt width-40' aaname='Notes:' check:innerText='Notes:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVkAAAAiCAYAAAD1YKptAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOWSURBVHhe7dvvayJHAIfx/reLsBwswTexsBQkVAJSkJLlwMLZF0IwNBTZgpTkRXxxKyXhEMrBEV8EDqGWAylCEMK3M7ujUePlR9sByz0fEG5nJuu9ehhm168EAPCGyAKAR0QWADwisgDgEZEFAI+ILAB4RGQBwCMiCwAeEVkA8GgtspevAwVBoOovYzeyYZwqNvNx9zPzj5m+V/pdR0N3CQBfgq2RDUpVpds6+i8iO+7G5t6JLt01AHwJtkfWfg7PNXXjS0QWAF5kS2QTnf5sgxiodraR2a2RnWvytq3afljEuRSqcthW9qebNtbibT+v71M7/yNT6yBSmM+Fig4S9T7M3Kwzu1baiBWFxd+He7Ea3fea3rl5ANhRWyN7eTfWaWz+Xarp/JObtLZEdtyt5uGLDtrqDTL1u4liG0N75PCxWDMdZeodlc26mtpmTTYq4j1/11K5ZKIZJ0ovzPhFqiS2sY6UXC1CO1Zq/y97VTW7fWWDvtKjSv6dlZMbt8a4SvKxf3ReDACebI+svfh4mgd17dhgM7KfeqrawB5lWtt7TvtqmHgG32dmn1t4eFxwo86+WdPob+xIZ+o3zPh+x6ww3Hcmg3zSMWvqJs4HqUmwQ2QB7KDPR9YYbx4bbER2elYz82V1RvnlmuGbyMw11L8trh9E1kS8Yu/1w7nZnZpd7Mqn2PXGxcO326wI9tdN9UcTzTkiAPA/8mhktXlssBHZIpz3IV1VzLlQLq9X7u12no99mu+KpeOzen6skI+XQpUPEqWDG85kAey8xyNrrR4beIhscuWunzKf6nqQqnl4/wAsqKYaE1oAO+zpyBrLY4MfWy88LkiUuQg+iOyoo7K5V/n42g28wN1cNz/Z+0Vq/e7GAGAHPSuyy2MDu3tcieyTD77q9w/NHkR28eArMiFe++OZsiMT6Fdmh/yX2cD+1lT5lYnpxk/FZhd1Igtg5z0vstbi2GA1ssZzXuGyil1vpNpxf/kK1+wqUWTvGcZq/Vq8wtX81j70ClRdfMftUM29Yk3jpFc8GDupq2Ijbo8LilW8XQBgJz0/ssb1cfF+6nrItvwYodHRcOXHCLnZUO1v3BoTx8li+ENPyfLHCIHCclWtt5Plq1+56VCd1bPYMFL1TabJ6iIiC2AHrUUWAPDfIrIA4BGRBQCPiCwAeERkAcAjIgsAHhFZAPCIyAKAR0QWADwisgDgEZEFAI+ILAB4I/0N6qAeHssvkKIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALMSURBVFhHxZdNaxNhEMfzBXoxnqxNlJYETIngKbXoxfqG1yIexEvx0pOn9qDSi16EIkptlKjVWih4UES0gl5swYtQpSAexA8gZI3pxt1kYzLOPJk1+zK7TWzD/uEHzT4z85/uPi+7sU5V3HM4jkwgS8gGoiPA0N90jcYoJs5p2xcWyyLLiIXYhltBsZST5TLdC5P7kDzSRCSTTqBcqtHHZTsTJmSQb4hU9H+gWhkuHy4MzCFlTtxJqGaObWRhAP3nvTC3odryncABeuY7eduDIA//nMCLNFmkhF6QZ9uW8AItte3M9m4hr/YSxR+0Zn2B+uQM1FbeQ+3NapuXK1CZHobKVNqHcXUQajcTLvSzw766zLJtTjucuMnU17+AJPP+eTAXkj6q95IAq7sA1trUF/p9dRnyjFMDtHVKAbB58TJbemT8BCM/JDZhFQZcDWyOB94BYoIaoP1bGlRYH9bZ1a3ai+tiA9WHSWi+3a3MrcJesaaDJWqADhFpUFE6dgGg0WBbh5oNMG4flJuYT6hH8Wv0kFjTwQY14DzVRMzF5+zqVv3TK7EB81ESjOkhsZYHnRqQBlxo6RNgzD6A6tPXivrnr9wCToc7J30NGHf3gZbKibW8dNSAF+3AKbbHp/PjO5iF/a4GyueyYp5ER4/AS2XqBtu3VF2c/Gf+e3YQigMjYp6AegShk9CLlj4OjWKJrVl1A4y5tGqgNLblxHOiJmHoMvQStDdY7+ahciUl5oSglmHgRiRRGhlHN4ttHfrTgNLRM2JOCGojCtyKgzDmnrBrW+bjZ2JsCK2tmM8D8TAKQkuN4ewvsjXuSWUdtMxpMTaE1mFEwh9dH8f6pWtsD1CZuSXGhOA+jkl4obsXkv5RdVRbax+hmDgixwTjfiEh4cVoX8lIOBDdS6ktDIjutdwWBkb3YWILE6L7NHMKk6P5OPUKi/Xg8zwW+wsVGPmj1tIhLQAAAABJRU5ErkJggg==" InformativeScreenshot="7a0fa22d3218f56aca5f88c635ab9f7b.png" Selector="&lt;html app='chrome.exe' title='Online Purchase Order Generator | Free PO Maker - Vyapar' /&gt;" Url="[in_browserUrl]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ended filing purchase order process&quot;]" />
+  </Sequence>
+</Activity>
